@@ -1,0 +1,550 @@
+/* ===== Start Variables ===== */
+
+:root {
+    /* ----- Fonts ----- */
+    --aleg: "Alegreya", serif;
+    --aleg-sans: "Alegreya Sans", sans-serif;
+
+    /* ----- Colors ----- */
+    --main-color: RGB(142, 119, 84);
+    --second-color: RGB(64, 61, 56);
+    --third-color: RGB(53, 51, 48);
+    --section-head-color: RGB(48, 48, 48);
+    --text-color: RGB(104, 104, 104);
+    --section-back-color: #F8F8F8;
+
+    /* ----- Other ----- */
+    --section-padding: 90px 60px;
+    --border-radius: 5px
+    
+}
+
+/* ===== End Variables ===== */
+
+
+/* ===== Start Global Rules ===== */
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--aleg-sans);
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset {
+    border: none;
+}
+
+button {
+    border: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-head {
+    font-family: var(--aleg);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--section-head-color);
+}
+
+/* === Media Queries === */
+
+/* --- Start Container --- */
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+/* --- End Container --- */
+
+/* === Media Queries === */
+
+/* ===== End Global Rules ===== */
+
+
+/* ===== Start Navbar ===== */
+
+#navbar {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    display: flow-root;
+    padding-block: 25px;
+    z-index: 100;
+}
+
+#navbar .logo {
+    float: left;
+    width: 176px;
+}
+
+#navbar .logo img {
+    width: 100%;
+}
+
+#navbar #links {
+    float: right;
+    padding-block: 18px;
+    font-family: var(--aleg);
+}
+
+#navbar #links li {
+    display: inline-block;
+}
+
+#navbar #links li a {
+    color: white;
+    text-decoration: none;
+    margin-inline: 6px;
+    font-size: 20px;
+}
+
+/* ===== End Navbar ===== */
+
+
+/* ===== Start Hero ===== */
+
+#hero {
+    background-image: url(/img/drew-coffman-1872.jpg);
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+#hero #overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#hero #overlay #hero-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#hero #overlay #hero-content #main-head {
+    font-family: var(--aleg);
+    font-size: 60px;   
+    letter-spacing: 3px;
+}
+
+#hero #overlay #hero-content #main-head::before {
+    content: 'Welcome to';
+    position: absolute;
+    left: 50%;
+    top: -24px;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-family: var(--aleg-sans);
+    font-weight: 400;
+}
+
+#hero #overlay #hero-content #info {
+    font-size: 24px;
+    margin: 10px 0px 20px;
+    max-width: 685px;
+}
+
+#hero #overlay #hero-content #btns button {
+    padding: 15px 28px;
+    color: white;
+    font-weight: 700;
+    border-radius: 4px;
+    height: 50px;
+}
+
+#hero #overlay #hero-content #btns button:hover {
+    cursor: pointer;
+}
+
+#hero #overlay #hero-content #btns #btn-one {
+    background-color: var(--main-color);
+    margin-right: 5px;
+    transition: 0.3s;
+}
+
+#hero #overlay #hero-content #btns button:hover#btn-one {
+    color: black;
+    background-color: white;
+}
+
+#hero #overlay #hero-content #btns #btn-two {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: 0.3s;
+}
+
+#hero #overlay #hero-content #btns button:hover#btn-two {
+    color: black;
+    background-color: white;
+}
+
+/* ===== End Hero ===== */
+
+
+/* ===== Start Who We Are ===== */
+
+#who {
+    padding: var(--section-padding);
+    display: flow-root;
+}
+
+#who #img-who {
+    max-width: 500px;
+    float: left;
+}
+
+#who #img-who img {
+    max-width: 80%;
+    border-radius: var(--border-radius);
+}
+
+#who #who-info .section-head,
+#who #who-info #who-text {
+    margin-bottom: 20px;
+}
+
+#who #who-info #who-text, 
+#who #who-info #to-do-list {
+    color: var(--text-color);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+#who #who-info #to-do-list li {
+    display: flex;
+    align-items: center;
+}
+
+#who #who-info #to-do-list li:not(:last-child) {
+    margin-bottom: 14px;
+}
+
+#who #who-info #to-do-list li span {
+    display: inline-block;
+}
+
+#who #who-info #to-do-list li .icon {
+    width: 30px;
+    height: 30px;
+    color: var(--main-color);
+    border: 1px solid rgba(104, 104, 104, 0.3);
+    border-radius: 50%;
+    margin-right: 8px;
+    padding: 18px;
+    position: relative;
+}
+
+#who #who-info #to-do-list li .icon i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+}
+
+
+
+/* ===== End Who We Are ===== */
+
+
+/* ===== Start Our Location ===== */
+
+#location {
+    padding: var(--section-padding);
+    background-color: var(--section-back-color);
+    display: flow-root;
+}
+
+#location #location-info {
+    max-width: 50%;
+    display: inline-block;
+}
+
+#location #location-info #location-text {
+    color: var(--text-color);
+    line-height: 31.62px;
+}
+
+#location #location-info #location-text:first-of-type {
+    margin: 10px 0px 30px;
+}
+
+#location #location-img {
+    max-width: 45%;
+    float: right;
+}
+
+#location #location-img img {
+    width: 80%;
+    border-radius: var(--border-radius);
+}
+
+
+
+/* ===== End Our Location ===== */
+
+
+/* ===== Start Our Backing ===== */
+
+#backing {
+    padding: var(--section-padding);
+    display: flow-root;
+    text-align: center;
+}
+
+#backing #backing-text {
+    margin: 5px 0px 30px;
+}
+
+#backing #backing-text, 
+#backing .backing-info .backing-info-caption {
+    color: var(--text-color);
+}
+
+#backing .backing-info {
+    display: inline-block;
+    width: 30%;
+}
+
+#backing .backing-info:nth-of-type(2) {
+    margin: 0px 20px;
+}
+
+#backing .backing-info img {
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+
+#backing .backing-info .backing-info-head {
+    font-family: var(--aleg);
+    font-size: 22px;
+    font-weight: 400;
+    margin: 10px 0px;
+}
+
+#backing .backing-info .backing-info-caption {
+    line-height: 23px;
+}
+
+/* ===== End Our Backing ===== */
+
+
+/* ===== Start Contact ===== */
+
+#contact {
+    padding: var(--section-padding);
+    background-color: var(--section-back-color);
+    display: flow-root;
+}
+
+#contact #contact-info,
+#contact iframe {
+    display: inline-block;
+}
+
+#contact #contact-info {
+    width: 50%;
+    vertical-align:top;
+}
+
+#contact #contact-info #contact-text {
+    max-width: 500px;
+    line-height: 25px;
+    margin: 10px 0px 15px;
+}
+
+#contact #contact-info #contact-text,
+#contact #contact-info #label-contact,
+#contact #contact-info #contact-list {
+    color: var(--text-color);
+}
+
+#contact #contact-info #label-contact {
+    font-size: 20px;
+}
+
+#contact #contact-info #contact-list {
+    margin-top: 10px;
+}
+
+#contact #contact-info #contact-list li {
+    margin-bottom: 10px;
+}
+
+#contact #contact-info #contact-list li .icon {
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+#contact iframe {
+    width: 40%;
+}
+
+/* ===== End Contact ===== */
+
+
+/* ===== Start Footer ===== */
+
+
+#footer {
+    padding: var(--section-padding);
+    background-color: RGB(64, 61, 56);
+    color: white;
+}
+
+#footer #about {
+    max-width: 20%;
+    vertical-align: top;
+}
+
+#footer article:not(#about) {
+    padding-left: 60px;
+}
+
+#footer article h3 {
+    margin-bottom: 15px;
+}
+
+#footer #about P {
+    color: RGB(150, 150, 150);
+    line-height: 25px;
+}
+
+#footer #about P:first-of-type {
+    margin-bottom: 15px;
+}
+
+#footer article {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 4);
+}
+
+
+#footer article ul {
+    color: RGB(150, 150, 150);
+}
+
+#footer article ul li {
+    padding: 10px 0px;
+}
+
+#footer article ul li:not(:last-of-type) {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+#footer article ul li i {
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+/* ===== End Footer ===== */
+
+
+/* ===== Start Footer Bottom ===== */
+
+#footer-bottom {
+    padding: var(--section-padding);
+    background-color: RGB(53, 51, 48);
+    text-align: center;
+}
+
+#footer-bottom #copy-right {
+    font-size: 15px;
+    color: var(--text-color);
+    margin-block: 20px;
+}
+
+#footer-bottom #social li {
+    position: relative;
+    display: inline-block;
+    margin-inline: 5px;
+    font-size: 19px;
+    color: var(--text-color);
+    background-color: #484540;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+#footer-bottom #social li:hover {
+    cursor: pointer;
+}
+
+#footer-bottom #social li i {
+    color: #8c8a86;
+}
+
+#footer-bottom #social li:hover i {
+    color: white;
+}
+
+#footer-bottom #social #facebook:hover {
+    background-color: #3b5998;
+}
+
+#footer-bottom #social #google:hover {
+    background-color: #dd4b39;
+}
+
+#footer-bottom #social #linkedin:hover {
+    background-color: #007bb5;
+}
+
+#footer-bottom #social #twitter:hover {
+    background-color: #00aced;
+}
+
+#footer-bottom #social li i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ===== End Footer Bottom ===== */
+
