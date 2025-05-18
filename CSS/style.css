@@ -137,37 +137,23 @@ ul {
 /* ===== Start Hero ===== */
 
 #hero {
-    background-image: url(/img/drew-coffman-1872.jpg);
+    background-image: linear-gradient(rgb(0 0 0 / 15%)), url(/img/drew-coffman-1872.jpg);
     background-position: center;
     height: 100vh;
-    position: relative;
     color: white;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#hero #overlay {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-#hero #overlay #hero-content {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#hero #overlay #hero-content #main-head {
+#hero #hero-content #main-head {
     font-family: var(--aleg);
     font-size: 60px;   
     letter-spacing: 3px;
 }
 
-#hero #overlay #hero-content #main-head::before {
+#hero #hero-content #main-head::before {
     content: 'Welcome to';
     position: absolute;
     left: 50%;
@@ -178,13 +164,13 @@ ul {
     font-weight: 400;
 }
 
-#hero #overlay #hero-content #info {
+#hero #hero-content #info {
     font-size: 24px;
     margin: 10px 0px 20px;
     max-width: 685px;
 }
 
-#hero #overlay #hero-content #btns button {
+#hero #hero-content #btns button {
     padding: 15px 28px;
     color: white;
     font-weight: 700;
@@ -192,28 +178,28 @@ ul {
     height: 50px;
 }
 
-#hero #overlay #hero-content #btns button:hover {
+#hero #hero-content #btns button:hover {
     cursor: pointer;
 }
 
-#hero #overlay #hero-content #btns #btn-one {
+#hero #hero-content #btns #btn-one {
     background-color: var(--main-color);
     margin-right: 5px;
     transition: 0.3s;
 }
 
-#hero #overlay #hero-content #btns button:hover#btn-one {
+#hero #hero-content #btns button:hover#btn-one {
     color: black;
     background-color: white;
 }
 
-#hero #overlay #hero-content #btns #btn-two {
+#hero #hero-content #btns #btn-two {
     background-color: transparent;
     border: 1px solid white;
     transition: 0.3s;
 }
 
-#hero #overlay #hero-content #btns button:hover#btn-two {
+#hero #hero-content #btns button:hover#btn-two {
     color: black;
     background-color: white;
 }
@@ -547,4 +533,3 @@ ul {
 }
 
 /* ===== End Footer Bottom ===== */
-
